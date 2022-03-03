@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang=”pt-br” xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>| Playlist |</title>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+	
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">Playlist</a>
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+					aria-controls="navbarNavAltMarkup" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<div class="navbar-nav">
+						<a class="nav-link active" aria-current="page" href="/">Home</a> <a
+							class="nav-link" href="/musicas">Listar Músicas</a> <a
+							class="nav-link" href="/cadastrarMusica">Adicionar Músicas</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+	</header>
+	<div class="container">
+		<br>
+		<h1>Adicionar música</h1>
+
+		<br>
+
+		<th:block th:include="mensagemValidacao"></th:block>
+
+
+		<form method="post">
+
+
+			<div class="form-group">
+				<label for=""><b>Música:</b> </label> <input type="text"
+					class="form-control" value="" placeholder="Insira o nome da música"
+					name="nome" required> <small class="form-text text-muted"><i></i></small>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col">
+
+					<div class="form-group">
+						<label for=""><b>Cantor:</b></label> <input type="text" value=""
+							name="cantor" class="form-control" required /> <small
+							class="form-text text-muted"><i>* Nome do cantor.</i></small>
+					</div>
+				</div>
+				<br>
+			</div>
+			<div class="form-group">
+
+				<label for=""><b>Tempo de Duração:</b></label>
+				<textarea class="form-control" name="tempo" maxlength="254" rows="3"
+					required></textarea>
+				<small class="form-text text-muted"><i>* Tempo estimado
+						da música.</i></small>
+
+			</div>
+			<br>
+
+			<button type="submit" class="btn btn-warning">Adicionar
+				Música</button>
+
+		</form>
+
+	</div>
+
+
+	<div style="height: 100px;"></div>
+
+	<div class="footer-copyright fixed-bottom bg-light text-center py-3">
+		<span class="text-dark align-middle"> Playlist - © 2022
+			Copyright</span>
+	</div>
+
+
+
+	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous">
+		
+	</script>
+
+
+</body>
+
+</html>
